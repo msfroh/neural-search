@@ -72,13 +72,11 @@ public class TextEmbeddingProcessor extends AbstractProcessor {
             log.error("Text embedding processor failed with exception: " + e.getMessage(), e);
             throw new RuntimeException("Text embedding processor failed with exception", e);
         }
-        log.info("Text embedding completed, returning ingestDocument!");
         return ingestDocument;
     }
 
     void processResponse(IngestDocument ingestDocument, Map<String, Object> knnMap, List<List<Float>> vectors) {
         Objects.requireNonNull(vectors, "embedding failed, inference returns null result!");
-        log.info("Text embedding result fetched, starting build vector output!");
         Map<String, Object> vectorOutput = buildVectorOutput(knnMap, vectors, ingestDocument.getSourceAndMetadata());
         vectorOutput.forEach(ingestDocument::appendFieldValue);
     }
