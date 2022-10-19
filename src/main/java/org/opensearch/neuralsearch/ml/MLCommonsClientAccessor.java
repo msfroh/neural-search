@@ -66,7 +66,7 @@ public class MLCommonsClientAccessor {
 
     /**
      * Abstraction to call predict function of api of MLClient with default targetResponse filters. It uses the
-     * custom model provided as modelId and run the {@link FunctionName.TEXT_EMBEDDING}. The return will be sent
+     * custom model provided as modelId and run the {@link FunctionName#TEXT_EMBEDDING}. The return will be sent
      * using the actionListener which will have a {@link List} of {@link List} of {@link Float} in the order of
      * inputText. We are not making this function generic enough to take any function or TaskType as currently we
      * need to run only TextEmbedding tasks only.
@@ -85,7 +85,7 @@ public class MLCommonsClientAccessor {
 
     /**
      * Abstraction to call predict function of api of MLClient with provided targetResponse filters. It uses the
-     * custom model provided as modelId and run the {@link FunctionName.TEXT_EMBEDDING}. The return will be sent
+     * custom model provided as modelId and run the {@link FunctionName#TEXT_EMBEDDING}. The return will be sent
      * using the actionListener which will have a {@link List} of {@link List} of {@link Float} in the order of
      * inputText. We are not making this function generic enough to take any function or TaskType as currently we
      * need to run only TextEmbedding tasks only.
@@ -111,7 +111,7 @@ public class MLCommonsClientAccessor {
 
     /**
      * Abstraction to call predict function of api of MLClient with provided targetResponseFilters. It uses the
-     * custom model provided as modelId and run the {@link FunctionName.TEXT_EMBEDDING}. The return will be sent
+     * custom model provided as modelId and run the {@link FunctionName#TEXT_EMBEDDING}. The return will be sent
      * using the actionListener which will have a {@link List} of {@link List} of {@link Float} in the order of
      * inputText. We are not making this function generic enough to take any function or TaskType as currently we need
      * to run only TextEmbedding tasks only. Please note this method is a blocking method, use this only when the processing
