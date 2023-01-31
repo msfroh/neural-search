@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         java: [11, 17]
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     name: Run Gradle Check on neural-search Plugin
     runs-on: ${{ matrix.os }}
@@ -41,7 +41,7 @@ jobs:
     strategy:
       matrix:
         java: [11, 17]
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     name: Pre-commit neural-search Plugin
     runs-on: ${{ matrix.os }}
